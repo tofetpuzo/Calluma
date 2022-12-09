@@ -4,15 +4,23 @@
  */
 package demo.application.service;
 
+import demo.application.Repo.RoleRepo;
+import demo.application.Repo.UserRepo;
 import demo.application.domain.Role;
 import demo.application.domain.Users;
 import java.util.List;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author femitemiola
  */
+
+@Service
 public class UserServiceImpl implements UserService{
+    
+    private final RoleRepo role_repo = null ;
+    private final UserRepo user_repo = null ;
 
     @Override
     public Users saveUser(Users user) {
