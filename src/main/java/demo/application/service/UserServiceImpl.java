@@ -7,7 +7,7 @@ package demo.application.service;
 import demo.application.Repo.RoleRepo;
 import demo.application.Repo.UserRepo;
 import demo.application.domain.Role;
-import demo.application.domain.Users;
+import demo.application.domain.User;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -29,7 +29,7 @@ public class UserServiceImpl implements UserService{
     private final UserRepo userRepo = null ;
 
     @Override
-    public Users saveUser(Users user) {    
+    public User saveUser(User user) {    
         log.info("saving users{} into the database", user.getName());
         return userRepo.save(user);
    
@@ -38,28 +38,25 @@ public class UserServiceImpl implements UserService{
     @Override
     public Role saveRole(Role role) {
         log.info("saving role {} to the database", role.getName());
-        return roleRepo.save(role);
-        
+        return roleRepo.save(role);     
     }
 
     @Override
     public void addRoleToUser(String username, String roleName) { 
         log.info("Adding role to user {} to a new role {} to the database", roleName, username);
-        Users user = userRepo.findByUsername(username);
+        User user = userRepo.findByUsername(username);
         Role role = roleRepo.findByRoleName(roleName);
-        user.getRoles().add(role);
-        
-        
+        user.getRoles().add(role);   
     }
 
     @Override
-    public Users getUser(String username) {
+    public User getUser(String username) {
         log.info("fetching username{} from database", username);
         return userRepo.findByUsername(username);
     }
 
     @Override
-    public List<Users> getUsers() {
+    public List<User> getUsers() {
         log.info("fetching all users");
         return userRepo.findAll();
     }

@@ -26,14 +26,14 @@ import lombok.NoArgsConstructor;
 
 // @Data -> this helps in setter and getter
 @Entity @Data @NoArgsConstructor @AllArgsConstructor
-public class Users {
+public class User {
     
     @Id 
     @GeneratedValue(strategy=AUTO)
-    private Long id;
-    
+    private Integer id;    
     private String name;
     private String username;
+    private String password; 
     
 //    map this class to as a tabel to a database
 //    the eager is used because at no point will 
