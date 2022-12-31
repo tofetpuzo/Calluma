@@ -30,32 +30,38 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public Users saveUser(Users user) {    
+        log.info("saving users{} into the database", user.getName());
         return userRepo.save(user);
    
     }
 
     @Override
     public Role saveRole(Role role) {
+        log.info("saving role {} to the database", role.getName());
         return roleRepo.save(role);
         
     }
 
     @Override
     public void addRoleToUser(String username, String roleName) { 
+        log.info("Adding role to user {} to a new role {} to the database", roleName, username);
         Users user = userRepo.findByUsername(username);
         Role role = roleRepo.findByRoleName(roleName);
         user.getRoles().add(role);
+        
         
     }
 
     @Override
     public Users getUser(String username) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        log.info("fetching username{} from database", username);
+        return userRepo.findByUsername(username);
     }
 
     @Override
     public List<Users> getUsers() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        log.info("fetching all users");
+        return userRepo.findAll();
     }
     
 }
