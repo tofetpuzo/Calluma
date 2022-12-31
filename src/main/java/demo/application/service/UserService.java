@@ -5,21 +5,21 @@
 package demo.application.service;
 
 import demo.application.domain.Role;
-import demo.application.domain.Users;
+import demo.application.domain.User;
 import java.util.List;
 /**
  *
  * @author femitemiola
  */
 public interface UserService {
-    Users saveUser(Users user);
+    User saveUser(User user);
     Role saveRole(Role role);
     void addRoleToUser(String username, String roleName);
-    Users getUser(String username);
-    List<Users> getUsers();
+    User getUser(String username);
+    List<User> getUsers();
     
    public static void main(String[] args) {
        String name[] = {"Jack", "Bob", "Mary"};
        System.out.println(name.length);
     }
-   }
+}

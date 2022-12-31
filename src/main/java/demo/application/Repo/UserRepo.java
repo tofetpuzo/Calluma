@@ -4,14 +4,14 @@
  */
 package demo.application.Repo;
 
-import demo.application.domain.Users;
+import demo.application.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  *
  * @author femitemiola
  */
-public interface UserRepo extends JpaRepository<Users, Long>{
-    Users findByUsername(String username);
+public interface UserRepo extends JpaRepository<User, Integer>{
+    User findByUsername(String username);
     
 }

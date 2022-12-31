@@ -23,7 +23,6 @@ import lombok.NoArgsConstructor;
 public class Role {
     @Id 
     @GeneratedValue(strategy=AUTO)
-    private Long id;
-    
+    private Integer id;
     private String name;
 }
