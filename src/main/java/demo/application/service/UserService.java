@@ -7,7 +7,6 @@ package demo.application.service;
 import demo.application.domain.Role;
 import demo.application.domain.Users;
 import java.util.List;
-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
 /**
  *
  * @author femitemiola
