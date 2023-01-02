@@ -18,8 +18,8 @@ public interface UserService {
     User getUser(String username);
     List<User> getUsers();
     
-   public static void main(String[] args) {
-       String name[] = {"Jack", "Bob", "Mary"};
-       System.out.println(name.length);
-    }
+//   public static void main(String[] args) {
+//       String name[] = {"Jack", "Bob", "Mary"};
+//       System.out.println(name.length);
+//    }
 }

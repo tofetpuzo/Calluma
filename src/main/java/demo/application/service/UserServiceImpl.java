@@ -25,8 +25,8 @@ import org.springframework.transaction.annotation.Transactional;
 // @Slf4j - for logging purposes
 public class UserServiceImpl implements UserService{
     
-    private final RoleRepo roleRepo = null ;
-    private final UserRepo userRepo = null ;
+    private final RoleRepo roleRepo;
+    private final UserRepo userRepo;
 
     @Override
     public User saveUser(User user) {    
@@ -37,7 +37,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public Role saveRole(Role role) {
-        log.info("saving role {} to the database", role.getName());
+        log.info("saving role {} to the database", role.getRoleName());
         return roleRepo.save(role);     
     }
 
