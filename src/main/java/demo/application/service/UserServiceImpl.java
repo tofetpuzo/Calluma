@@ -51,7 +51,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public User getUser(String username) {
-        log.info("fetching username{} from databases", username);
+        log.info("fetching username{} from database", username);
         return userRepo.findByUsername(username);
     }
 
