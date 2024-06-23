@@ -47,8 +47,8 @@ public class ATM {
                         System.exit(0);
                     case 1:
                         String username = getDatawithLine("Enter Username: ");
-                        String password = getDatawithLine("Enter password: ");
-                        if (bank.authenticate(username, password)) {
+                        String pwd = getDatawithLine("Enter password: ");
+                        if (bank.authenticate(username, pwd)) {
                             bank_Operation();
                         } else {
                             Logger.getLogger(ATM.class.getName());

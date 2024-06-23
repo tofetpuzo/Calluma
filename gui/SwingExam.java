@@ -45,7 +45,7 @@ public class SwingExam extends javax.swing.JFrame {
         txtuser.setText("username");
 
         lblPass.setForeground(new java.awt.Color(0, 0, 255));
-        lblPass.setText("password");
+        lblPass.setText("pwd");
 
         lbltextuserfield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,10 +128,10 @@ public class SwingExam extends javax.swing.JFrame {
     private void SubmitButtonTextfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitButtonTextfieldActionPerformed
         // TODO add your handling code here:
         String username = lbltextuserfield.getText();
-        String password = jpasstextfield.getText();
+        String pwd = jpasstextfield.getText();
         System.out.println("Username: " + username);
-        System.out.println("password: " + password);
-        JOptionPane.showMessageDialog(this, "Username: " + username + "\npassword: " + password );
+        System.out.println("password: " + pwd);
+        JOptionPane.showMessageDialog(this, "Username: " + username + "\npwd: " + pwd );
     }//GEN-LAST:event_SubmitButtonTextfieldActionPerformed
 
     /**

@@ -17,7 +17,7 @@ public class Connect {
 
     static String url = "jdbc:mysql://localhost:3306/kebank";
     static String user = "root";
-    static String pass = "your_password_here";
+    static String pass = "pwd";
     static Connection con = null;
 
     private Connect() {
