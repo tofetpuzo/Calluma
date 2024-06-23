@@ -1,6 +1,6 @@
 # PayFriends
 
-PayFriends is a mobile banking application developed in Java. This app aims to provide users with a seamless and intuitive experience for managing their daily expenses and also keep track of their expenses. Aims to help customers track their expenses and save money.
+PayFriends is a mobile banking application developed in Java. This app aims to provide users with a seamless and intuitive experience for managing their daily expenses and also keep track of their expenses and help save money.
 
 ## Features
 
