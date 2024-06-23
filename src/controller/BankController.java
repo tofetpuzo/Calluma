@@ -45,8 +45,8 @@ public class BankController {
 
     }
 
-    public boolean authenticate(String username, String pwd) {
-        return username.equalsIgnoreCase("") && pwd.equals("");
+    public boolean authenticate(String urs, String pwrsds) {
+        return urs.equalsIgnoreCase("") && pwrsds.equals("");
     }
     
     public boolean addCustomerAccount(CustomerAccount customeraccount){
