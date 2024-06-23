@@ -1,13 +1,12 @@
 # PayFriends
 
-PayFriends is a mobile banking application developed in Java. This app aims to provide users with a seamless and intuitive experience for managing their daily expenses and also keep track of their expenses and help save money.
+PayFriends is banking application developed in Java. This application aims to provide users with a seamless and intuitive experience for managing their daily expenses and also keep track of their expenses and help save money.
 
 ## Features
 
 - **User Authentication:** Secure login and registration system.
 - **Track Expenses:** see how much you spend .
 - **Subscriptions:** find subscriptions/expenses easily in bank accounts
-- \*\*
 - **User Profile:** View and edit user profile information.
 
 ## Screenshots
@@ -31,16 +30,11 @@ These instructions will help you get a copy of the project up and running on you
    git clone https://github.com/your-username/MyMobileApp.git
    ```
 
-2. **Open the project in Android Studio:**
-
-   - Open Android Studio.
-   - Click on `File` > `Open` and navigate to the project directory.
-
-3. **Build the project:**
+2. **Build the project:**
 
    - Click on `Build` > `Rebuild Project` to build the project and download necessary dependencies.
 
-4. **Run the app:**
+3. **Run the app:**
 
    - Connect an Android device or start an emulator.
    - Click on `Run` > `Run 'app'`.
@@ -56,19 +50,9 @@ These instructions will help you get a copy of the project up and running on you
 
    - Use your registered email and password to log in.
 
-3. **Manage tasks:**
-
-   - Add new tasks by clicking the `Add Task` button.
-   - Edit or delete tasks by selecting the task from the list.
-
-4. **Set reminders:**
-
-   - Navigate to the reminders section and set reminders for your tasks.
-
 ## Built With
 
 - [Java](https://www.java.com) - The programming language used.
-- [Android Studio](https://developer.android.com/studio) - The official IDE for Android development.
 
 ## Contributing
 
