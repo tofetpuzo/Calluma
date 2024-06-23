@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package kebank_datababse.model.entities;
+package src.model.entities;
 
 import java.util.Date;
 
@@ -24,9 +24,7 @@ public class Transaction {
         this.amount = amount;
         this.workingBalance = workingBalance;
         this.trxnDate = trxnDate;
-    }
-    
-    
+    } 
 
     public int getTrxnCode() {
         return trxnCode;
