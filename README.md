@@ -1,4 +1,4 @@
-# MyMobileApp
+# PayFriends
 
 MyMobileApp is a mobile application developed in Java. This app aims to provide users with a seamless and intuitive experience for managing their daily tasks. The application features user authentication, task management, and reminders.
 
