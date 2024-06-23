@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package kebank_datababse.model;
+package src.model;
 
 /**
  *
@@ -15,12 +15,16 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import kebank_datababse.connect.Connect;
-import kebank_datababse.model.entities.Accounts;
+import src.connect.Connect;
+import src.model.entities.Accounts;
 
 public class AccountDAO {
 
     static Connection con = null;
+
+    private AccountDAO() {
+        // private constructor to hide the implicit public one
+    }
 
     public static ResultSet getAllAccounts() {
 
@@ -29,7 +33,7 @@ public class AccountDAO {
             con = Connect.getConnection();
             if (con != null) {
                 Statement smt = con.createStatement();
-                String query = "SELECT * FROM accounts";
+                String query = "SELECT accountName, accountAddress, accountID FROM accounts";
                 ResultSet rs = smt.executeQuery(query);
                 while (rs.next()) {
                     return rs;

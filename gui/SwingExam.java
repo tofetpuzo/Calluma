@@ -65,11 +65,7 @@ public class SwingExam extends javax.swing.JFrame {
         SubmitButtonTextfield.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         SubmitButtonTextfield.setForeground(new java.awt.Color(255, 153, 153));
         SubmitButtonTextfield.setText("Sumbit");
-        SubmitButtonTextfield.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SubmitButtonTextfieldActionPerformed(evt);
-            }
-        });
+        SubmitButtonTextfield.addActionListener(this::SubmitButtonTextfieldActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

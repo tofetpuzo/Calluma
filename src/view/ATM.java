@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package kebank_datababse.view;
+package src.view;
 
 import java.util.Date;
 import java.util.Iterator;
 import java.util.Scanner;
-import kebank_datababse.controller.BankController;
-import kebank_datababse.controller.CustomerController;
-import kebank_datababse.model.CustomerAccountDAO;
-import kebank_datababse.model.entities.Accounts;
-import kebank_datababse.model.entities.Customer;
-import kebank_datababse.model.entities.CustomerAccount;
+import src.controller.BankController;
+import src.model.CustomerAccountDAO;
+import src.model.entities.Accounts;
+import src.model.entities.Customer;
+import src.model.entities.CustomerAccount;
 import java.sql.ResultSet;
+import src.controller.CustomerController;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;

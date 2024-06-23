@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package kebank_datababse.model;
+package src.model;
 
 /**
  *
@@ -16,8 +16,8 @@ import java.sql.ResultSet;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import kebank_datababse.connect.Connect;
-import kebank_datababse.model.entities.Customer;
+import src.connect.Connect;
+import src.model.entities.Customer;
 
 public class CustomerDAO {
 

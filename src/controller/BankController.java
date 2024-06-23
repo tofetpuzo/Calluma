@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package kebank_datababse.controller;
+package src.controller;
 
 import java.util.ArrayList;
-import kebank_datababse.model.AccountDAO;
-import kebank_datababse.model.CustomerAccountDAO;
-import kebank_datababse.model.entities.Accounts;
+import src.model.AccountDAO;
+import src.model.CustomerAccountDAO;
+import src.model.entities.Accounts;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import kebank_datababse.model.CustomerDAO;
-import kebank_datababse.model.entities.Customer;
-import kebank_datababse.model.entities.CustomerAccount;
+import src.model.CustomerDAO;
+import src.model.entities.Customer;
+import src.model.entities.CustomerAccount;
 
 /**
  *
@@ -45,15 +45,8 @@ public class BankController {
 
     }
 
-    public boolean authenticate(String username, String Password) {
-        if (username.equalsIgnoreCase("admin")) {
-            if (Password.equals("ambc")) {
-                return true;
-            }
-        }
-
-        return false;
-
+    public boolean authenticate(String username, String password) {
+        return username.equalsIgnoreCase("admin") && password.equals("ambc");
     }
     
     public boolean addCustomerAccount(CustomerAccount customeraccount){
@@ -68,12 +61,12 @@ public class BankController {
         return CustomerAccountDAO.getAllCustomersAccounts();
     }
     
-    public ArrayList getAllAccounts() {
+    public List<Accounts> getAllAccounts() {
         ResultSet rs = AccountDAO.getAllAccounts();
         try {
             while (rs.next()) {
                 accountType.add(new Accounts(rs.getInt(1), rs.getString(2)));
-
+    
             }
         } catch (SQLException ex) {
             Logger.getLogger(BankController.class.getName()).log(Level.SEVERE, null, ex);

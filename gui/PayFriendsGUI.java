@@ -12,8 +12,8 @@ import java.awt.Frame;
  *
  * @author femitemiola
  */
-public class AWTExampleB {
-    public AWTExampleB(){
+public class PayFriendsGUI {
+    public static void main(String[] args){
         Frame f = new Frame();
         
         Button b = new Button("show");
@@ -24,11 +24,9 @@ public class AWTExampleB {
         
         f.setLayout(null); //It helps you to lay out your object on the frame
         f.setVisible(true);
+        
     }
-    
-    public static void main(String[] args){
-        new AWTExampleB();
-    }
+
     
     
 }

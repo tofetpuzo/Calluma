@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package kebank_datababse.model.entities;
+package src.model.entities;
 
 import java.util.Date;
 
@@ -27,21 +27,21 @@ public class Customer {
     private String nok;
     private final char gender;
 
-    public Customer(int customercode, String firstName, String middleName, String lastName, String address, String city, String state, String Country, String c_code, String mobile, String email, Date dob, String nok, char gender) {
-        this.customercode = customercode;
-        this.firstName = firstName;
-        this.middleName = middleName;
-        this.lastName = lastName;
-        this.address = address;
-        this.city = city;
-        this.state = state;
-        this.Country = Country;
-        this.c_code = c_code;
-        this.mobile = mobile;
-        this.email = email;
-        this.dob = dob;
-        this.nok = nok;
-        this.gender = gender;
+    public Customer(CustomerInfo customerInfo) {
+        this.customercode = customerInfo.getCustomercode();
+        this.firstName = customerInfo.getFirstName();
+        this.middleName = customerInfo.getMiddleName();
+        this.lastName = customerInfo.getLastName();
+        this.address = customerInfo.getAddress();
+        this.city = customerInfo.getCity();
+        this.state = customerInfo.getState();
+        this.Country = customerInfo.getCountry();
+        this.c_code = customerInfo.getC_code();
+        this.mobile = customerInfo.getMobile();
+        this.email = customerInfo.getEmail();
+        this.dob = customerInfo.getDob();
+        this.nok = customerInfo.getNok();
+        this.gender = customerInfo.getGender();
     }
 
     public char getGender() {
@@ -108,12 +108,8 @@ public class Customer {
         this.Country = Country;
     }
 
-    public String getC_code() {
+    public String getCountryCode() {
         return c_code;
-    }
-
-    public void setC_code(String c_code) {
-        this.c_code = c_code;
     }
 
     public String getMobile() {
@@ -136,7 +132,7 @@ public class Customer {
         return dob;
     }
 
-    public Date setDob(Date dob) {
+    public Date setdob(Date dob) {
         this.dob = dob;
         return null;
     }

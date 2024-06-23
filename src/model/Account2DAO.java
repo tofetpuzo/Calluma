@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package kebank_datababse.model;
+package src.model;
 
-import kebank_datababse.model.entities.Accounts;
+import src.model.entities.Accounts;
 import java.sql.Statement;
 import java.sql.SQLException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import kebank_datababse.connect.Connect;
+import src.connect.Connect;
 
 /**
  *
@@ -21,6 +21,10 @@ import kebank_datababse.connect.Connect;
 public class Account2DAO {
 
     static Connection con = null;
+
+    private Account2DAO() {
+        // private constructor to hide the implicit public one
+    }
 
     public static ResultSet getAllAccounts() {
 
