@@ -33,12 +33,8 @@ These instructions will help you get a copy of the project up and running on you
 
    - Click on `Build` > `Rebuild Project` to build the project and download necessary dependencies.
 
-3. **Run the app:**
 
-   - Connect an Android device or start an emulator.
-   - Click on `Run` > `Run 'app'`.
-
-4. **Log in:**
+3. **Log in:**
 
    - Use your registered email and password to log in.
 
