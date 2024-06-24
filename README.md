@@ -38,14 +38,7 @@ These instructions will help you get a copy of the project up and running on you
    - Connect an Android device or start an emulator.
    - Click on `Run` > `Run 'app'`.
 
-## Usage
-
-1. **Register an account:**
-
-   - Open the app and navigate to the registration screen.
-   - Enter your details and create a new account.
-
-2. **Log in:**
+4. **Log in:**
 
    - Use your registered email and password to log in.
 
