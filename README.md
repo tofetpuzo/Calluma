@@ -9,9 +9,6 @@ PayFriends is banking application developed in Java. This application aims to pr
 - **Subscriptions:** find subscriptions/expenses easily in bank accounts
 - **User Profile:** View and edit user profile information.
 
-## Screenshots
-
-<!-- Add screenshots of your app here -->
 
 ## Getting Started
 
