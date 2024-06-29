@@ -103,4 +103,46 @@ public class Server {
                 return gson.toJson(responseData);
             }
         });
+        post("/customer-portal", (request, response) -> {
+            // For demonstration purposes, we're using the Checkout session to retrieve the customer ID.
+            // Typically this is stored alongside the authenticated user in your database.
+            Session checkoutSession = Session.retrieve(request.queryParams("sessionId"));
+            String customer = checkoutSession.getCustomer();
+            String domainUrl = dotenv.get("DOMAIN");
+
+            com.stripe.param.billingportal.SessionCreateParams params = new com.stripe.param.billingportal.SessionCreateParams.Builder()
+                .setReturnUrl(domainUrl)
+                .setCustomer(customer)
+                .build();
+            com.stripe.model.billingportal.Session portalSession = com.stripe.model.billingportal.Session.create(params);
+
+            response.redirect(portalSession.getUrl(), 303);
+            return "";
+        });
+
+        post("/webhook", (request, response) -> {
+            String payload = request.body();
+            String sigHeader = request.headers("Stripe-Signature");
+            String endpointSecret = dotenv.get("STRIPE_WEBHOOK_SECRET");
+
+            Event event = null;
+
+            try {
+                event = Webhook.constructEvent(payload, sigHeader, endpointSecret);
+            } catch (SignatureVerificationException e) {
+                // Invalid signature
+                response.status(this.code);
+                return "";
+            }
+
+            if (event.getType().equals("checkout.session.completed")) {
+                response.status(this.code);
+                return "";
+            } else {
+                response.status(200);
+                return "";
+            }
+        });
+    }
+
 }
