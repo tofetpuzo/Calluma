@@ -1,4 +1,4 @@
-# PayFriends
+# Calluma
 
 PayFriends is banking application developed in Java. This application aims to provide users with a seamless and intuitive experience for managing their daily expenses and also keep track of their expenses and help save money.
 
