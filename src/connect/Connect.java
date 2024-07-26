@@ -44,6 +44,7 @@ public class Connect {
         }
     }
 
+    // connect to database
     private static Connection getConnection() throws SQLException {
         con = DriverManager.getConnection(url, user, pass);
 
