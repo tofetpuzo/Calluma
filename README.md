@@ -50,7 +50,7 @@ These instructions will help you get a copy of the project up and running on you
 
 ## Authors
 
-- **Your Name** - _Initial work_ - [YourUsername](https://github.com/your-username)
+- **Tems** - _Initial work_ - [Tems](https://github.com/your-username)
 
 See also the list of [contributors](https://github.com/your-username/MyMobileApp/contributors) who participated in this project.
 
